@@ -4,109 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description"
-        content="A simple, static, single-file landing page provided as an outlet for Ryan's various endeavours">
+        content="A simple, static landing page provided as an outlet for Ryan's various endeavours">
     <meta name="author" content="Ryan M.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="./js/index.js"></script>
+    <link href="./css/styles.css" rel="stylesheet">
+
     <title>Landing Page</title>
-
-    <style>
-        body {
-            font-family: Roboto, sans-serif;
-            background-color: black;
-            color: white;
-            overflow: hidden;
-            user-select: none;
-            -moz-user-select: none;
-            -webkit-user-select: none;
-            -ms-user-select: none;
-        }
-
-        @keyframes slideIn {
-            0% {
-                left: 0px;
-                top: 0px;
-            }
-
-            100% {
-                left: 600px;
-                top: 0px;
-                animation-play-state: paused;
-            }
-        }
-
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-
-            100% {
-                opacity: 1;
-            }
-        }
-
-        .container {
-            animation-name: slideIn, fadeIn;
-            animation-duration: 3s;
-            position: relative;
-            animation-timing-function: linear;
-            animation-fill-mode: forwards;
-            margin-top: 300px;
-            display: inline-block;
-        }
-
-        /* Weird icon trials. CSS is weird. Will revisit later
-        .email-icon {
-            animation-name: slideIn, fadeIn;
-            animation-duration: 3s;
-            animation-timing-function: linear;
-            animation-fill-mode: forwards;
-            color: #ffffff;
-            position: relative;
-            transition: color 0.2s;
-            margin-right: 900px;
-        } */
-
-        /* .email-icon:hover {
-            color: #c0c0c0;
-        }
-
-        ion-icon {
-            font-size: 64px;
-        } */
-
-        .avatar {
-            float: left;
-            padding-right: 20px;
-            -webkit-user-drag: none;
-        }
-
-        .name {
-            background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
-            /* Applies the linear gradient to the specified area */
-            -webkit-background-clip: text;
-            /* Confines colours to within the characters */
-            -webkit-text-fill-color: transparent;
-            /* Makes the text transparent by default */
-            /* All cited from https://welearncode.com/rainbow-text */
-        }
-    </style>
 </head>
 
 <body>
     <div class="container">
-        <img class="avatar" src="img/nobitches.png" alt="NO BITCHES?" style="width: 256px; height: 256px;">
-        <h1>Hi there, I'm <span class="name">Ryan</span>! It's a pleasure to meet you.</h1>
-        <p>After like half a year of owning my domain I've finally pointed it somewhere, and this is the result... Voila</p>
+        <div class="bio">
+            <img class="avatar" src="img/nobitches.png" alt="NO BITCHES?" style="width: 256px; height: 256px;">
+            <h1>
+                Hi there, I'm <span class="name">Ryan</span>! It's a pleasure to meet you.
+            </h1>
+            <p>
+                After like half a year of owning my domain I've finally pointed it somewhere, and this is the
+                result...
+                Voila
+            </p>
+        </div>
     </div>
-
-    <!-- TODO: Add social icons, particularly email and GitHub 
-    <a class="email-icon" href="mailto:contactvoidd@protonmail.com">
-        <ion-icon name="mail-outline"></ion-icon>
-    </a> -->
-
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
